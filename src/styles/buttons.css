@@ -1,136 +1,212 @@
 /**
-* Styling for buttons
+* customized divs (containers) and framed objects (background and frame image).
 */
 
-/* button style */
-.rpgui-button {
-  /* hide button default stuff */
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  outline: none;
+/* game div without background image*/
+.rpgui-container {
+  /* position style and default z */
+  position: fixed;
+  z-index: 10;
+
+  overflow: show;
+}
+
+/* game div with background image*/
+.framed {
+  /* border */
+  border-style: solid;
+  border-image-source: url("../assets/rpg/border-image.png");
+  border-image-repeat: repeat;
+  border-image-slice: 6 6 6 6;
+  border-image-width: 18px;
+  border-width: 15px;
+  padding: 12px;
+
+  /* internal border */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 
   /* background */
-  background: url("../assets/rpg/button.png") no-repeat no-repeat;
+  background: url("../assets/rpg/background-image.png") repeat repeat;
   background-clip: padding-box;
   background-origin: padding-box;
   background-position: center;
-  background-size: 100% 100%;
-
-  /* font size */
-  font-size: 1em;
-
-  /* default size and display */
-  max-width: 100%;
-  min-width: 140px;
-  height: 60px;
-  display: inline-block;
-
-  /* padding */
-  padding-left: 35px;
-  padding-right: 35px;
 }
 
-/* button hover */
-.rpgui-button.hover,
-.rpgui-button:hover {
-  background-image: url("../assets/rpg/button-hover.png");
-}
+/* game div with golden background image*/
+.framed-golden {
+  /* border */
+  border-style: solid;
+  border-image-source: url("../assets/rpg/border-image-golden.png");
+  border-image-repeat: repeat;
+  border-image-slice: 4 4 4 4;
+  border-image-width: 18px;
+  border-width: 15px;
+  padding: 12px;
 
-/* button clicked */
-.rpgui-button.down,
-.rpgui-button:active {
-  background-image: url("../assets/rpg/button-down.png");
-}
-
-/* golden button stuff */
-.rpgui-button.golden p {
-  display: inline-block;
-}
-
-/* golden button style */
-.rpgui-button.golden {
-  /* hide button default stuff */
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  outline: none;
+  /* internal border */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 
   /* background */
-  background: url("../assets/rpg/button-golden.png") no-repeat no-repeat;
+  background: url("../assets/rpg/background-image-golden.png") repeat repeat;
   background-clip: padding-box;
   background-origin: padding-box;
   background-position: center;
-  background-size: 100% 80%;
-
-  /* default size and display */
-  max-width: 100%;
-  min-width: 140px;
-  height: 60px;
-  display: inline-block;
-
-  /* padding */
-  padding-top: 5px;
-  padding-left: 35px;
-  padding-right: 35px;
-  overflow: visible;
 }
 
-/* button hover */
-.rpgui-button.golden.hover,
-.rpgui-button.golden:hover {
-  background-image: url("../assets/rpg/button-golden-hover.png");
+/* game div with golden2 background image*/
+.framed-golden-2 {
+  /* border */
+  border-style: solid;
+  border-image-source: url("../assets/rpg/border-image-golden2.png");
+  border-image-repeat: repeat;
+  border-image-slice: 8 8 8 8;
+  border-image-width: 18px;
+  border-width: 15px;
+  padding: 12px;
+
+  /* internal border */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  /* background */
+  background: url("../assets/rpg/background-image-golden2.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
 }
 
-/* button clicked */
-.rpgui-button.golden.down,
-.rpgui-button.golden:active {
-  background-image: url("../assets/rpg/button-golden-down.png");
+/* game div with soft grey background image*/
+.framed-grey {
+  position: relative;
+
+  /* border */
+  border-style: solid;
+  border-image-source: url("../assets/rpg/border-image-grey.png");
+  border-image-repeat: repeat;
+  border-image-slice: 3 3 3 3;
+  border-image-width: 7px;
+  border-width: 7px;
+  padding: 12px;
+
+  /* internal border */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  /* background */
+  background: url("../assets/rpg/background-image-grey.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
 }
-
-.rpgui-button.golden:before {
-  white-space: nowrap;
-  display: inline-block;
-  content: "";
-  width: 34px;
-  display: block;
-  height: 110%;
-  background: transparent url("../assets/rpg/button-golden-left.png") no-repeat
-    right center;
-  background-size: 100% 100%;
-  margin: 0 0 0 0;
-  left: 0px;
-  float: left;
-  margin-left: -46px;
-  margin-top: -5%;
-}
-
-.rpgui-button.golden:after {
-  white-space: nowrap;
-  display: block;
-  content: "";
-  width: 34px;
-  height: 110%;
-  background: transparent url("../assets/rpg/button-golden-right.png") no-repeat
-    left center;
-  background-size: 100% 100%;
-  margin: 0 0 0 0;
-  right: 0px;
-  float: right;
-  margin-right: -46px;
-  margin-top: -5%;
-}
-
-/*
-.rpgui-button.golden:hover:before {
-
-  background-image: url('img/button-golden-left-hover.png');
-}
-
-.rpgui-button.golden:hover:after {
-
-  background-image: url('img/button-golden-right-hover.png');
-}
+/**
+* customized divs (containers) and framed objects (background and frame image).
 */
+
+/* game div without background image*/
+.rpgui-container {
+  /* position style and default z */
+  position: fixed;
+  z-index: 10;
+
+  overflow: show;
+}
+
+/* game div with background image*/
+.framed {
+  /* border */
+  border-style: solid;
+  border-image-source: url("../assets/rpg/border-image.png");
+  border-image-repeat: repeat;
+  border-image-slice: 6 6 6 6;
+  border-image-width: 18px;
+  border-width: 15px;
+  padding: 12px;
+
+  /* internal border */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  /* background */
+  background: url("../assets/rpg/background-image.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+}
+
+/* game div with golden background image*/
+.framed-golden {
+  /* border */
+  border-style: solid;
+  border-image-source: url("../assets/rpg/border-image-golden.png");
+  border-image-repeat: repeat;
+  border-image-slice: 4 4 4 4;
+  border-image-width: 18px;
+  border-width: 15px;
+  padding: 12px;
+
+  /* internal border */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  /* background */
+  background: url("../assets/rpg/background-image-golden.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+}
+
+/* game div with golden2 background image*/
+.framed-golden-2 {
+  /* border */
+  border-style: solid;
+  border-image-source: url("../assets/rpg/border-image-golden2.png");
+  border-image-repeat: repeat;
+  border-image-slice: 8 8 8 8;
+  border-image-width: 18px;
+  border-width: 15px;
+  padding: 12px;
+
+  /* internal border */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  /* background */
+  background: url("../assets/rpg/background-image-golden2.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+}
+
+/* game div with soft grey background image*/
+.framed-grey {
+  position: relative;
+
+  /* border */
+  border-style: solid;
+  border-image-source: url("../assets/rpg/border-image-grey.png");
+  border-image-repeat: repeat;
+  border-image-slice: 3 3 3 3;
+  border-image-width: 7px;
+  border-width: 7px;
+  padding: 12px;
+
+  /* internal border */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  /* background */
+  background: url("../assets/rpg/background-image-grey.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+}
